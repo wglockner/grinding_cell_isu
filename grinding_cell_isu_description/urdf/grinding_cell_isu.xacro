@@ -1,0 +1,528 @@
+<?xml version="1.0" ?>
+<robot name="grinding_cell_isu" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find grinding_cell_isu_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find grinding_cell_isu_description)/urdf/grinding_cell_isu.ros2control" />
+<xacro:include filename="$(find grinding_cell_isu_description)/urdf/grinding_cell_isu.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.00023938782124240985 -0.05347092729023973 0.09442085603896697" rpy="0 0 0"/>
+    <mass value="333.98868689360233"/>
+    <inertia ixx="11.71113" iyy="5.576834" izz="14.859734" ixy="-0.036643" iyz="-0.338236" ixz="0.000917"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link1_1">
+  <inertial>
+    <origin xyz="-0.06653895264969915 0.06394271891497666 0.1778261342766808" rpy="0 0 0"/>
+    <mass value="566.6327954645911"/>
+    <inertia ixx="22.181539" iyy="20.935752" izz="25.337877" ixy="-0.577338" iyz="-3.28915" ixz="3.491837"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.234" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.234" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link2_1">
+  <inertial>
+    <origin xyz="0.20305394831555346 -0.03912073071835348 0.5971409899589974" rpy="0 0 0"/>
+    <mass value="9.798994384257494"/>
+    <inertia ixx="1.764748" iyy="1.76245" izz="0.010409" ixy="0.002422" iyz="-0.005454" ixz="-5.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006 -0.3 -0.55" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006 -0.3 -0.55" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link3_1">
+  <inertial>
+    <origin xyz="-0.19206722458894557 -0.027909362871369525 0.10530362485936107" rpy="0 0 0"/>
+    <mass value="71.44558552488685"/>
+    <inertia ixx="1.83895" iyy="2.211138" izz="1.018852" ixy="-0.1937" iyz="0.275653" ixz="0.114685"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.059 -0.3 -1.74" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.059 -0.3 -1.74" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link4_1">
+  <inertial>
+    <origin xyz="0.08488777504484482 0.6137477335056789 0.0006002942177838477" rpy="0 0 0"/>
+    <mass value="117.61031632905585"/>
+    <inertia ixx="8.618509" iyy="1.178546" izz="8.933092" ixy="-1.495647" iyz="0.014729" ixz="0.006184"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.567 -2.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.567 -2.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link5_1">
+  <inertial>
+    <origin xyz="-0.10963928700693486 0.05275619945833565 0.0011382347889319355" rpy="0 0 0"/>
+    <mass value="77.96532200729659"/>
+    <inertia ixx="0.817944" iyy="0.496492" izz="0.936739" ixy="0.039893" iyz="0.008236" ixz="0.008649"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1155 -1.49 -2.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1155 -1.49 -2.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link6_1">
+  <inertial>
+    <origin xyz="1.0723590035471246e-06 0.007341483930386028 4.5787910352146355e-08" rpy="0 0 0"/>
+    <mass value="3.3223589685623236"/>
+    <inertia ixx="0.009251" iyy="0.018393" izz="0.00928" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0015 -1.709176 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0015 -1.709176 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/link6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_mount_plate_1">
+  <inertial>
+    <origin xyz="-0.08012460137644362 0.0015023889998331263 4.578789791764848e-08" rpy="0 0 0"/>
+    <mass value="1.8819916346345602"/>
+    <inertia ixx="0.008766" iyy="0.023121" izz="0.014362" ixy="-1.3e-05" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001499 -1.725176 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/camera_mount_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001499 -1.725176 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/camera_mount_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_mount_robot_side_1">
+  <inertial>
+    <origin xyz="-0.012699518879688204 0.00781091419347435 -0.01269995416921299" rpy="0 0 0"/>
+    <mass value="0.28900671545824247"/>
+    <inertia ixx="4.2e-05" iyy="0.000158" izz="0.000128" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.189001 -1.728592 -1.963623" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/camera_mount_robot_side_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.189001 -1.728592 -1.963623" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/camera_mount_robot_side_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_mount_camera_side_1">
+  <inertial>
+    <origin xyz="-0.0076195188797280045 0.05134002984332997 -3.8754179527700217e-05" rpy="0 0 0"/>
+    <mass value="0.8361634896609813"/>
+    <inertia ixx="0.001077" iyy="0.000223" izz="0.001217" ixy="0.0" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.194081 -1.744213 -1.950923" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/camera_mount_camera_side_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.194081 -1.744213 -1.950923" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/camera_mount_camera_side_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pushcorp_adapter_plate_1">
+  <inertial>
+    <origin xyz="4.811202501983462e-07 0.014498160004371208 4.57879845150444e-08" rpy="0 0 0"/>
+    <mass value="5.378742130618471"/>
+    <inertia ixx="0.010695" iyy="0.020166" izz="0.010695" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001499 -1.728592 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/pushcorp_adapter_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001499 -1.728592 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/pushcorp_adapter_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="afd_base_1">
+  <inertial>
+    <origin xyz="-2.0412307203724082e-05 0.04732166606944688 9.191560594912218e-05" rpy="0 0 0"/>
+    <mass value="42.10576122334246"/>
+    <inertia ixx="0.172045" iyy="0.547331" izz="0.416949" ixy="1.1e-05" iyz="-1.5e-05" ixz="0.000101"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001499 -1.766692 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/afd_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001499 -1.766692 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/afd_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="adf_slide_1">
+  <inertial>
+    <origin xyz="2.5729909938865736e-05 0.018441351058661626 4.24726317715951e-06" rpy="0 0 0"/>
+    <mass value="17.042801472492954"/>
+    <inertia ixx="0.060101" iyy="0.181263" izz="0.124996" ixy="-3e-06" iyz="-8e-06" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001499 -1.851149 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/adf_slide_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001499 -1.851149 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/adf_slide_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="asm02948-1_1">
+  <inertial>
+    <origin xyz="0.01205157797336169 0.009687634396200906 0.08255004578789227" rpy="0 0 0"/>
+    <mass value="0.563626411808913"/>
+    <inertia ixx="0.002201" iyy="0.002234" izz="7.9e-05" ixy="2e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.074701 -1.888872 -1.957273" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/asm02948-1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.074701 -1.888872 -1.957273" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/asm02948-1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="asm02658-1_1">
+  <inertial>
+    <origin xyz="4.811202478499643e-07 0.06686082668387616 -0.08257286288885446" rpy="0 0 0"/>
+    <mass value="1.0934686790796517"/>
+    <inertia ixx="0.007281" iyy="0.003255" izz="0.004071" ixy="0.0" iyz="3e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.077699 -1.888872 -2.122373" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/asm02658-1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.077699 -1.888872 -2.122373" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/asm02658-1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="stc1015_1">
+  <inertial>
+    <origin xyz="0.00484854396194169 0.07891088870158902 1.7782103611807543e-07" rpy="0 0 0"/>
+    <mass value="64.60780296495582"/>
+    <inertia ixx="0.20806" iyy="1.146497" izz="1.147435" ixy="0.000874" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.063525 -1.896533 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/stc1015_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.063525 -1.896533 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/stc1015_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="par04289-1_1">
+  <inertial>
+    <origin xyz="0.026349854723028837 -1.2419882322589615e-07 2.1479853331562992e-06" rpy="0 0 0"/>
+    <mass value="0.5667113950386173"/>
+    <inertia ixx="9e-05" iyy="0.000363" izz="0.000357" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.204041 -1.975273 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/par04289-1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.204041 -1.975273 -2.039823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/par04289-1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="435le_v11_1">
+  <inertial>
+    <origin xyz="0.01680048112155233 -0.02969440193494033 -0.03536651952343983" rpy="0 0 0"/>
+    <mass value="2.9228125495632598"/>
+    <inertia ixx="0.00559" iyy="0.001505" izz="0.004859" ixy="0.0" iyz="0.000125" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.218501 -1.851268 -1.941398" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/435le_v11_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.218501 -1.851268 -1.941398" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/435le_v11_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_color_optical_frame_1">
+  <inertial>
+    <origin xyz="-1.9659031546340322 -1.2700379998365463 -0.5957834672703926" rpy="0 0 0"/>
+    <mass value="1.0103240413784984e-09"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1.649498 -1.552038 -3.721086" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/camera_color_optical_frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.649498 -1.552038 -3.721086" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find grinding_cell_isu_description)/meshes/camera_color_optical_frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="joint1" type="revolute">
+  <origin xyz="0.0 0.0 0.234" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link1_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="2.792526" lower="-2.792526" effort="100" velocity="100"/>
+</joint>
+
+<joint name="joint2" type="revolute">
+  <origin xyz="0.006 0.3 0.316" rpy="0 0 0"/>
+  <parent link="link1_1"/>
+  <child link="link2_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.396263" lower="-1.047197" effort="100" velocity="100"/>
+</joint>
+
+<joint name="joint3" type="revolute">
+  <origin xyz="0.053 0.0 1.19" rpy="0 0 0"/>
+  <parent link="link2_1"/>
+  <child link="link3_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="1.658062" lower="-1.308996" effort="100" velocity="100"/>
+</joint>
+
+<joint name="joint4" type="revolute">
+  <origin xyz="-0.059 0.267 0.3" rpy="0 0 0"/>
+  <parent link="link3_1"/>
+  <child link="link4_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="3.665191" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="joint5" type="revolute">
+  <origin xyz="0.1155 0.923 0.0" rpy="0 0 0"/>
+  <parent link="link4_1"/>
+  <child link="link5_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="0.036554" lower="-2.094395" effort="100" velocity="100"/>
+</joint>
+
+<joint name="joint6" type="revolute">
+  <origin xyz="-0.114 0.219176 -0.000177" rpy="0 0 0"/>
+  <parent link="link5_1"/>
+  <child link="link6_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="link6_to_camera_mount_plate" type="fixed">
+  <origin xyz="-1e-06 0.016 0.0" rpy="0 0 0"/>
+  <parent link="link6_1"/>
+  <child link="camera_mount_plate_1"/>
+</joint>
+
+<joint name="camera_mount_plate_to_camera_mount_robot_side" type="fixed">
+  <origin xyz="-0.1905 0.003416 -0.0762" rpy="0 0 0"/>
+  <parent link="camera_mount_plate_1"/>
+  <child link="camera_mount_robot_side_1"/>
+</joint>
+
+<joint name="camera_mount_robot_side_to_camera_mount_camera_side" type="fixed">
+  <origin xyz="-0.00508 0.015621 -0.0127" rpy="0 0 0"/>
+  <parent link="camera_mount_robot_side_1"/>
+  <child link="camera_mount_camera_side_1"/>
+</joint>
+
+<joint name="camera_mount_plate_to_pushcorp_adapter_plate" type="fixed">
+  <origin xyz="0.0 0.003416 0.0" rpy="0 0 0"/>
+  <parent link="camera_mount_plate_1"/>
+  <child link="pushcorp_adapter_plate_1"/>
+</joint>
+
+<joint name="pushcorp_adapter_plate_to_afd_base" type="fixed">
+  <origin xyz="0.0 0.0381 0.0" rpy="0 0 0"/>
+  <parent link="pushcorp_adapter_plate_1"/>
+  <child link="afd_base_1"/>
+</joint>
+
+<joint name="afd_base_to_afd_slide" type="prismatic">
+  <origin xyz="0.0 0.084457 0.0" rpy="0 0 0"/>
+  <parent link="afd_base_1"/>
+  <child link="adf_slide_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+  <limit upper="0.02" lower="-0.02" effort="100" velocity="100"/>
+</joint>
+
+<joint name="afd_slide_to_asm02948-1" type="fixed">
+  <origin xyz="-0.0762 0.037723 -0.08255" rpy="0 0 0"/>
+  <parent link="adf_slide_1"/>
+  <child link="asm02948-1_1"/>
+</joint>
+
+<joint name="afd_slide_to_asm02658-1" type="fixed">
+  <origin xyz="0.0762 0.037723 0.08255" rpy="0 0 0"/>
+  <parent link="adf_slide_1"/>
+  <child link="asm02658-1_1"/>
+</joint>
+
+<joint name="asm02948-1_to_stc1015" type="fixed">
+  <origin xyz="0.011176 0.007661 0.08255" rpy="0 0 0"/>
+  <parent link="asm02948-1_1"/>
+  <child link="stc1015_1"/>
+</joint>
+
+<joint name="stc1015_to_par04289-1" type="fixed">
+  <origin xyz="0.267566 0.07874 0.0" rpy="0 0 0"/>
+  <parent link="stc1015_1"/>
+  <child link="par04289-1_1"/>
+</joint>
+
+<joint name="camera_mount_camera_side_to_gemini_435_le" type="fixed">
+  <origin xyz="-0.02442 0.107055 -0.009525" rpy="0 0 0"/>
+  <parent link="camera_mount_camera_side_1"/>
+  <child link="435le_v11_1"/>
+</joint>
+
+<joint name="gemini435le_to_camera_color_optical_frame" type="fixed">
+  <origin xyz="1.867999 -0.29923 1.779688" rpy="0 0 0"/>
+  <parent link="435le_v11_1"/>
+  <child link="camera_color_optical_frame_1"/>
+</joint>
+
+</robot>
